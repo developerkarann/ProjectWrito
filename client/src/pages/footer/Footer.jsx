@@ -112,7 +112,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-x-2 my-2">
                 <FaRegEnvelope className="text-4xl p-2 bg-[#1ab79d] rounded-xl text-white"></FaRegEnvelope>
-                <a href="mailto:ravinder@writo.in" className="link link-hover">ravinder@writo.in</a>
+                <a href="mailto:ravinder@writo.in" className="link link-hover">ravinder@writo.tech</a>
               </div>
               <div className="flex items-center gap-x-2">
                 <FaPhoneAlt className="text-4xl p-2 bg-[#1ab79d] rounded-xl text-white"></FaPhoneAlt>

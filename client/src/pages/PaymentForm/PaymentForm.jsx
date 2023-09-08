@@ -81,11 +81,11 @@ const PaymentForm = () => {
     }, [])
 
 
-    // const handleSubmitForm = (event) => {
-    //     event.preventDefault();
+    const handleSubmitForm = (event) => {
+        event.preventDefault();
 
-    //     onClickStart()
-    // }
+        onClickStart()
+    }
 
     // Backend Api Integration >>>>>
 
@@ -114,7 +114,7 @@ const PaymentForm = () => {
 
         const { studentName, email, number, program } = inputData
 
-        const response = await fetch('http://localhost:5000/api/payment', {
+        const response = await fetch('https://project-writo-server.vercel.app/api/payment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -143,8 +143,13 @@ const PaymentForm = () => {
             });
             setInputData({ ...inputData, studentName: "", email: "", number: "", program: "" })
             onClickStart()
+            handleUPI()
         }
 
+    }
+
+    const handleUPI = () => {
+        window.location.href = "upi://pay?pa=writoeducationpvtltd@oksbi&pn=Writoeducationpvtltd&am=1180.00&cu=INR&aid=uGICAgMCysemQXg"
     }
 
 
@@ -220,7 +225,6 @@ const PaymentForm = () => {
                                 <option>Python Development</option>
                                 <option>Android Development</option>
                                 <option>MERN stack Development</option>
-                                <option>Android App Development</option>
                                 <option>Machine Learning</option>
                             </select>
                         </div>
@@ -246,10 +250,8 @@ const PaymentForm = () => {
                             <img className="h-6 w-12" src="https://i.ibb.co/7GX248v/download-7.png" alt="" />
                         </div> */}
                         <div className="h-15 ">
-                            <button className="md:ms-2  bg-[#05ad11]  p-5 text-white font-bold w-full md:w-48" onClick={handleSubmit} ><input type="submit" value="Pay with QR  ₹" /> {totalPlay}</button>
-                            <Link to="upi://pay?pa=writoeducationpvtltd@oksbi&pn=Writoeducationpvtltd&am=1180.00&cu=INR&aid=uGICAgMCysemQXg" >
-                                <button className="md:ms-2  bg-[#05ad11]  p-5 text-white font-bold w-full md:w-48" onClick={handleSubmit} > Pay with UPI ₹ {totalPlay}</button>
-                            </Link>
+                            <button className="md:ms-2 mb-2 mt-2  bg-[#05ad11]  p-5 text-white font-bold w-full md:w-48" onClick={handleSubmit} >Pay with QR  ₹{totalPlay}</button>
+                            <button className="md:ms-2  bg-[#05ad11]  p-5 text-white font-bold w-full md:w-48" onClick={handleSubmit} > Pay with UPI ₹ {totalPlay}</button>
                         </div>
                     </div>
 
