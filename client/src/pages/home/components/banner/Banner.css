@@ -1,0 +1,40 @@
+.banner-bg {
+    /* background-image: url(.././../../../assets/home/hero-bg.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #eef6f5;
+}
+
+.home-banner-right {
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+}
+
+.banner1 {
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.banner2 {
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+.banner3 {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+@media (min-width: 640px) {
+    .home-banner-right {
+        background-image: url(.././../../../assets/home/hero-shape-2.png);
+    }
+}
+
+@media (max-width: 640px) {
+    .banner1 {
+        border-top-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+    }
+}

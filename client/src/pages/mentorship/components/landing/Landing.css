@@ -1,0 +1,114 @@
+.animate-mover {
+  animation: mover 3s ease-in-out infinite;
+}
+
+@keyframes mover {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee {
+  width: 50%;
+  /* Adjust as needed */
+  white-space: nowrap;
+  animation-duration: 13s;
+  /* Adjust animation speed */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: flex;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#marquee1 {
+  animation-name: scroll-left;
+}
+
+#marquee2 {
+  animation-name: scroll-right;
+}
+
+.leftToRight {
+  animation: leftToRight 20s infinite linear;
+}
+
+.rightToLeft {
+  animation: rightToLeft 20s infinite linear;
+}
+
+
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-60%)
+  }
+
+  100% {
+    transform: translateX(60%)
+  }
+
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(60%)
+  }
+
+  100% {
+    transform: translateX(-60%)
+  }
+}
+
+@media screen and (max-width: 640px) {
+  @keyframes leftToRight {
+    0% {
+      transform: translateX(-70%)
+    }
+
+    100% {
+      transform: translateX(100%)
+    }
+
+  }
+
+  @keyframes rightToLeft {
+    0% {
+      transform: translateX(70%)
+    }
+
+    100% {
+      transform: translateX(-100%)
+    }
+  }
+}

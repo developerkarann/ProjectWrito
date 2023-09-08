@@ -1,0 +1,33 @@
+.transition {
+    transition: 0.5s;
+    color: #1ab79d;
+}
+
+.bg-gradient {
+    background: -webkit-linear-gradient(45deg, #13e27a, #1ab79d);
+}
+
+.input-field {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+
+.btn-form:hover {
+    background: -webkit-linear-gradient(45deg, #13e27a, #1ab79d);
+}
+
+.footer-padding {
+    padding: 150px 0 60px 0;
+}
+
+@media screen and (max-width: 475px) {
+    .footer-padding {
+        padding: 200px 0 60px 0;
+    }
+}
+@media screen and (max-width: 300px) {
+    .footer-padding {
+        padding: 250px 0 60px 0;
+    }
+}

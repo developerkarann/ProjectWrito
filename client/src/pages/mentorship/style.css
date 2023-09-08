@@ -1,0 +1,555 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.all {
+	margin: 0;
+	display: grid;
+	place-items: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.mcard {
+	width: 330px;
+}
+
+
+
+
+
+
+
+/************************************************
+<------- MENTORS and REVIEW CARDS STYLES ------->
+*************************************************/
+.craw {
+	margin: 0 105px;
+	padding: 10px 0;
+}
+
+.craw .react-multi-carousel-item {
+	margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************
+<------------  MENTORS CARDS STYLES ------------>
+*************************************************/
+
+.card .card-borders {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 30px;
+}
+
+.card .card-borders .border-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 2px;
+	background: hsl(240, 31%, 25%);
+	transform: translateX(-100%);
+	animation: slide-in-horizontal 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.card .card-borders .border-right {
+	position: absolute;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: hsl(240, 31%, 25%);
+	transform: translateY(100%);
+	animation: slide-in-vertical 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.card .card-borders .border-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: hsl(240, 31%, 25%);
+	transform: translateX(100%);
+	animation: slide-in-horizontal-reverse 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.card .card-borders .border-left {
+	position: absolute;
+	top: 0;
+	width: 2px;
+	height: 100%;
+	background: hsl(240, 31%, 25%);
+	transform: translateY(-100%);
+	animation: slide-in-vertical-reverse 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.card .card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 40px 15px 40px 15px;
+	background: #fff;
+	border: solid #1ab79d;
+	opacity: 0;
+	border-radius: 30px;
+	transform: scale(0.6);
+	animation: bump-in 0.5s 0.8s forwards;
+}
+
+.card .card-content:hover {
+	cursor: pointer;
+	transition: 0.6s ease-out;
+	box-shadow: 0 0px 0.6px #1ab79d, 0 0px 1.3px #1ab79d, 0 0px 2.5px #1ab79d, 0 0px 3.5px #1ab79d, 0 0px 6.4px #1ab79d, 0 0px 10px #1ab79d;
+	border-bottom: 10px solid #1ab79d;
+}
+
+.card .card-content .avatar {
+	width: 160px;
+	height: 160px;
+	margin-bottom: 10px;
+	opacity: 0;
+	transform: scale(0.6);
+	border: 3px solid #f4f4f4;
+	border-right-color: #1ab79d;
+	border-bottom-color: #1ab79d;
+	border-top-color: #1ab79d;
+	border-radius: 50%;
+	padding: 10px;
+	animation: bump-in 0.5s 1s forwards;
+}
+
+.card .card-content .username {
+	position: relative;
+	font-size: 25px;
+	font-weight: 700;
+	margin: 0;
+	color: transparent;
+	line-height: 40px;
+	animation: fill-text-green 1.2s 2s forwards;
+}
+
+.card .card-content .company {
+	position: relative;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0;
+	color: transparent;
+	line-height: 40px;
+	animation: fill-text-red 1.2s 2s forwards;
+}
+
+.card .card-content .username::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: black;
+	background: #252029;
+	transform: scaleX(0);
+	transform-origin: left;
+	border-radius: 20px;
+	animation: slide-in-out 1.2s 1.2s cubic-bezier(0.75, 0, 0, 1) forwards;
+}
+
+.card .card-content .designation {
+	position: relative;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: 600;
+	margin: 0;
+	color: transparent;
+	background: #fff;
+	padding: 0 10px 0 10px;
+	border-radius: 30px;
+	margin: 6px 0 6px 0;
+	animation: fill-text-white 1.2s 2s forwards;
+}
+
+.card .card-content .designation::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: black;
+	background: #252029;
+	border-radius: 20px;
+	transform: scaleX(0);
+	transform-origin: left;
+	animation: slide-in-out 1.2s 1.2s cubic-bezier(0.75, 0, 0, 1) backwards;
+}
+
+.card .card-content .bio {
+	position: relative;
+	line-height: 25px;
+	font-size: 14px;
+	margin: 0;
+	color: transparent;
+	animation: fill-text-white 1.2s 2s forwards;
+	margin: 6px 0 7px 0;
+}
+
+.card .card-content .bio::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: black;
+	background: #252029;
+	border-radius: 20px;
+	transform: scaleX(0);
+	transform-origin: left;
+	animation: slide-in-out 1.2s 1.2s cubic-bezier(0.75, 0, 0, 1) forwards;
+}
+
+.card .card-content .social-icons {
+	display: flex;
+	margin-top: 15px;
+}
+
+.card .card-content .social-icons .social-icon {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0 15px;
+	border-radius: 50%;
+	text-decoration: none;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(1)::before {
+	animation-delay: 2.1s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(1)::after {
+	animation-delay: 2.2s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(1) i {
+	animation-delay: 2.3s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(2)::before {
+	animation-delay: 2.2s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(2)::after {
+	animation-delay: 2.3s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(2) i {
+	animation-delay: 2.4s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(3)::before {
+	animation-delay: 2.3s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(3)::after {
+	animation-delay: 2.4s;
+}
+
+.card .card-content .social-icons .social-icon:nth-child(3) i {
+	animation-delay: 2.5s;
+}
+
+.card .card-content .social-icons .social-icon::before,
+.card .card-content .social-icons .social-icon::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	transform: scale(0);
+}
+
+.card .card-content .social-icons .social-icon::before {
+	background: #f7f1e3;
+	animation: scale-in 0.5s cubic-bezier(0.75, 0, 0, 1) forwards;
+}
+
+.card .card-content .social-icons .social-icon::after {
+	background: #1ab79d;
+	animation: scale-in 0.5s cubic-bezier(0.75, 0, 0, 1) forwards;
+}
+
+.card .card-content .social-icons .social-icon i {
+	z-index: 1;
+	transform: scale(0);
+	animation: scale-in 0.5s cubic-bezier(0.75, 0, 0, 1) forwards;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+@keyframes bump-in {
+	50% {
+		transform: scale(1.05);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slide-in-horizontal {
+	50% {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes slide-in-horizontal-reverse {
+	50% {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes slide-in-vertical {
+	50% {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes slide-in-vertical-reverse {
+	50% {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(100%);
+	}
+}
+
+@keyframes slide-in-out {
+	50% {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	50.1% {
+		transform-origin: right;
+	}
+
+	100% {
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+}
+
+@keyframes fill-text-white {
+	to {
+		color: black;
+	}
+}
+
+@keyframes fill-text-red {
+	to {
+		color: #ee4962;
+	}
+}
+
+@keyframes fill-text-green {
+	to {
+		color: #1ab79d;
+	}
+}
+
+@keyframes scale-in {
+	to {
+		transform: scale(1);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************
+<----------  MENTORSHIP STEPS STYLES ---------->
+*************************************************/
+
+.mentorship-card-circle {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 30px;
+	border-radius: 50%;
+	background-color: #1ab79d;
+	color: white;
+}
+
+
+
+
+
+
+
+/*************************************************** 
+<----------  ROAD MAP COMPONENT'S STYLES ---------->
+***************************************************/
+.road-map-shadow {
+	box-shadow: 0 15px 20px 5px #ee4962;
+	border-radius: 50%;
+	background-color: #ee4962;
+	background-blend-mode: multiply;
+}
+
+
+
+
+
+/************************************
+<----------  CARDS SHADOW ---------->
+*************************************/
+.mentorship-card-shadow {
+	box-shadow: 0 6px #00cbab;
+	background-color: #eef6f5;
+}
+
+
+
+@media screen and (max-width: 900px) {
+	.left {
+		padding-left: 20px;
+
+	}
+
+	.left h1 {
+		font-size: 30px;
+	}
+
+	.left p {
+		font-size: 16px;
+		margin-top: 0px;
+	}
+
+	.left button {
+		height: 5vh;
+		font-size: 13px;
+		border-radius: 30px;
+		color: #fff;
+	}
+
+	.row {
+		margin-top: 0px;
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+
+	.stat h1 {
+		font-size: 23px;
+	}
+
+	.stat p {
+		font-size: 13px;
+	}
+
+	.craw {
+		margin: 0 50px !important;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	.heading {
+		font-size: 22px;
+	}
+
+	/* .react-multi-carousel-list{
+		margin-left: 15px;
+	} */
+
+	.left {
+		padding-right: 0;
+	}
+
+	.left h1 {
+		font-size: 25px;
+	}
+
+	.left p {
+		font-size: 16px;
+		margin-top: -5px;
+		margin-right: 10px;
+
+	}
+
+	.left button {
+		height: 5vh;
+		font-size: 10px;
+
+	}
+
+	.row {
+		margin-top: 23px;
+		padding-top: 0;
+	}
+
+	.circle {
+		width: 50px;
+	}
+
+	.stat h1 {
+		font-size: 22px;
+	}
+
+	.stat p {
+		font-size: 13px;
+	}
+
+	.craw {
+		margin: 0 0px !important;
+	}
+
+	.mcard {
+		width: 300px !important;
+	}
+}

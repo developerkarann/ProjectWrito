@@ -1,0 +1,20 @@
+
+ 
+
+@media (max-width: 576px) {
+    .image-container {
+      height: 70vh;
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  
+    .image-container img {
+      max-width: initial;
+      height: 100%;
+      transform-origin: left;
+    }
+  }
+  
+  .image-container {
+    width: 100%;
+  }

@@ -1,0 +1,45 @@
+/********************** 
+      Slider styles
+**********************/
+
+.card {
+    height: 100%;
+}
+
+.news-blogs-card-shadow {
+    box-shadow: 0 6px #00cbab;
+    background-color: #eef6f5;
+    border-radius: 15px;
+}
+
+
+.studentReviewSwiper {
+    width: 95%;
+    height: 440px;
+    padding-bottom: 10px;
+}
+.studentReviewSwiper img{
+    height: 50px;
+    width: 50px;
+}
+
+.studentReviewSwiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    .studentReviewSwiper{
+        height: 460px;
+    }
+}

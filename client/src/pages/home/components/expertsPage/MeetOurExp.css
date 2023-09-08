@@ -1,0 +1,138 @@
+.moe_page {
+    background: linear-gradient(#11998e,#38ef7d);
+}
+
+.expert_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: rgb(0, 0, 0);
+}
+
+.expert_heading-text {
+    position: relative;
+}
+
+.expert_heading-text::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top,#0F2027,#2C5364);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.experts_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 2rem 0;
+}
+
+.experts_container::-webkit-scrollbar {
+    display: none;
+}
+.experts_container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.expert_card {
+    min-width: 450px;
+    background: white;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.expert_image{
+    width: 100%;
+    position: relative;
+}
+.social_links{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.social_links img{
+    width: 24px;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+.social_links img:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 5px 10px 16px #1D976C inset;
+    
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .expert_heading {
+        flex-direction: column;
+    }
+    .social_links img{
+        width: 20px;
+        margin: 0 10px;
+        border-radius: 4px;
+        padding: 2px;
+    }
+    .expert_heading-text::before {
+        display: none;
+    }
+    .expert_heading-text {
+        position: relative;
+        padding: 0 1rem;
+    }
+    .expert_card {
+        min-width: 180px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .expert_heading {
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+    .expert_heading-text::before {
+        display: none;
+    }
+    .expert_heading-text {
+        position: relative;
+        padding: 0.5rem 3rem;
+    }
+    .expert_card {
+        min-width: 225px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .expert_heading {
+        flex-direction: column;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .expert_heading {
+        flex-direction: row;
+    }
+    .expert_heading-text::before {
+        display: block;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

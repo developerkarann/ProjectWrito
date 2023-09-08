@@ -1,0 +1,232 @@
+/**
+   * dropdown courses 
+   */
+
+.courseDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.courseDropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    border-radius: 10px;
+    margin-left: -80px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.courseDropdown-content a {
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+}
+
+/* .childdropdown:hover .childdropdown-content {
+    display: block;
+    z-index: 40;
+} */
+
+.courseDropdown:hover {
+    display: block !important;
+    z-index: 40;
+}
+
+
+/* *
+  * child dropdown
+  */
+.childdropbtn {
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+}
+
+.childdropbtn:hover,
+.childdropdown:hover,
+.childdropdown-content a:hover {
+    background-color: rgb(199, 196, 196);
+    width: 100%;
+}
+
+.childdropdown-content a:hover {
+    border-left: 4px solid rgb(117, 116, 116);
+}
+
+.childdropdown {
+    padding-left: 10px;
+}
+
+.childdropdown:hover {
+    border-left: 3px solid orange;
+}
+
+.childdropdown {
+    display: inline-block;
+    width: 100%;
+}
+
+.childdropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    min-width: 400px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f1f1f1;
+    margin-left: 312px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.childdropdown-content .sub-heading {
+    color: #0bb09f;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.childdropdown-content a {
+    color: black;
+    width: 350px;
+    padding: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+/* *
+  * practice dropdown
+  */
+
+.practice {
+    position: relative;
+    display: inline-block;
+}
+
+.practice-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -40px;
+}
+
+.practice-content a {
+    position: relative;
+    font-size: 14px;
+    color: black;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.practice-content p {
+    border-bottom: 1px solid #0bb09f;
+    padding-left: 14px;
+}
+
+.practice-content a::before {
+    content: "";
+    position: absolute;
+    background-color: #0bb09f;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.practice-content a:hover::before {
+    content: "";
+    position: absolute;
+    background-color: #0bb09f;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.practice:hover .practice-content {
+    display: block;
+    z-index: 40;
+}
+
+/* *
+  * Mentorship nav link
+  */
+
+.mentorshipBtn {
+    padding: 0 2px 0 2px;
+    background-color: #ee4962;
+    border-radius: 7px;
+    color: white;
+    position: relative;
+    animation: btnAnimation 2s infinite;
+}
+
+@keyframes btnAnimation{
+    
+    0%{
+        background-color: #eb0707;
+    }
+    100%{
+        background-color: #ed6579;
+    }
+}
+
+/* *
+  * Scholarship nav link
+  */
+.scholarshipBtn {
+    font-size: 12px;
+    color: rgb(27, 82, 27);
+    background-color: rgb(179, 243, 179);
+    border-radius: 5px;
+    padding: 0 2px 0 2px;
+}
+
+
+/* *
+  * Community nav link
+  */
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    /* background-color: #f1f1f1; */
+    margin-left: -400px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* top: 7rem; */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+    z-index: 40;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn1 {
+    background-color: #3e8e41;
+} */

@@ -1,0 +1,117 @@
+.text-pink {
+        color: #ee4962;
+}
+
+.bg-color {
+        background: #1ab79d
+}
+
+.text-gray {
+        color: gray;
+        /* color: #ece8e82a; */
+}
+
+.myBorder {
+        border-top-left-radius: 100px !important;
+        border-bottom-right-radius: 100px !important;
+}
+
+.footer-bg {
+        background-image: url('../../assets/footer-bg.png');
+}
+
+.inputAndBtn,
+.card-shadow {
+        position: relative;
+        box-shadow: 5px 10px 12px #fde7fd;
+        border-radius: 15px;
+        padding: 8px;
+}
+
+
+/* *
+Button Hover 
+*/
+.allBtn,
+.form-btn {
+        color: white;
+        font-weight: 400;
+        overflow: hidden;
+        display: flex;
+        padding: 13px 26px;
+        align-items: center;
+        column-gap: 5px;
+        position: relative;
+        background-color: #1ab79d;
+        z-index: 1;
+        border-radius: 5px;
+}
+
+.form-btn {
+        transition: 0.5s;
+}
+
+.allBtn::before,
+.form-btn::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-image: linear-gradient(90deg, #1ab79d 0%, #31b978 100%);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.5s;
+}
+
+.form-btn:hover:before,
+.allBtn:hover:before {
+        width: 100%;
+}
+
+.form-btn:hover {
+        transform: translateY(-6px);
+}
+
+
+/* *
+    Collapse section
+*/
+
+.collapseContainer {
+        position: relative;
+        box-shadow: 5px 5px 10px rgb(180, 174, 174);
+        border-radius: 8px;
+        padding: 8px;
+}
+
+.collapseContainer h1 {
+        font-size: 18px;
+        font-weight: 500;
+}
+
+.collapseContainer h1:hover {
+        color: #ee4962;
+}
+
+.collapseContainer article p {
+        font-size: 16px;
+        color: gray;
+}
+
+.collapseContent {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+}
+
+.collapseContent.openCollapse {
+        max-height: 1000px;
+}
+
+.hr-line {
+        height: 1px;
+        background: linear-gradient(to right, transparent, black 50%, transparent);
+        width: 100%;
+        margin: 8px 0 8px 0;
+}

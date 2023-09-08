@@ -1,0 +1,305 @@
+
+/******
+Banner section
+******/
+.hire-banner-btn {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 0;
+        background-color: #1ab79d;
+        color: white;
+        padding: 4px 12px;
+}
+
+.hire-blur-text {
+        font-size: 32px;
+        color: transparent;
+        text-shadow: 0 0 8px #000;
+}
+
+.hire-circle {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-color: bisque;
+        position: absolute;
+}
+
+.hire-half-circle {
+        height: 80px;
+        width: 40px;
+        position: absolute;
+        background-color: bisque;
+        left: 0;
+        border-radius: 0 40px 40px 0px;
+}
+
+
+.hire-img-shape {
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+
+/* same shape for four card */
+.sameOne {
+        height: 80px;
+        width: 80px;
+}
+
+.hire-imgOne {
+        background-image: url('../../assets/react.svg');
+        background-color: rgb(199, 255, 255);
+        border-radius: 0 40px 0px 40px;
+}
+
+.hire-imgFive {
+        margin-top: 10px;
+        background-color: #fadbf7;
+        border-radius: 40px 40px 0px 40px;
+}
+
+.hire-imgSix {
+        margin-top: 10px;
+        background-color: #fadbf7;
+        border-radius: 0px 40px 40px 40px;
+}
+
+.hire-imgSeven {
+        margin-top: 10px;
+        background-color: skyblue;
+        border-radius: 80px 0px 0px 0px;
+}
+
+
+
+/* same shape for three card */
+.sameTwo {
+        height: 160px;
+        width: 160px;
+}
+
+.hire-imgTwo {
+        background-image: url('../../assets/react.svg');
+        width: 80px;
+        background-color: gray;
+        border-radius: 0 80px 80px 0px;
+}
+
+.hire-imgThree {
+        background-image: url('../../assets/react.svg');
+        background-color: rgb(203, 248, 248);
+        border-radius: 80px 0px 0px 80px;
+}
+
+.hire-imgFour {
+        background-image: url('../../assets/react.svg');
+        margin-top: 10px;
+        background-color: rgb(250, 131, 88);
+        border-radius: 80px 80px 80px 0px;
+}
+
+
+
+/* ***** 
+carousel style
+***** */
+
+.hiringPartners-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.hiringPartners-slide img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+}
+
+.hiringPartners .swiper {
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+}
+
+.hiringPartners-button-next {
+        display: none;
+}
+
+.hiringPartners-button-prev {
+        display: none;
+}
+
+
+@media (max-width: 768px) {
+
+        /* same shape for three card */
+        .sameTwo {
+                height: 120px;
+                width: 120px;
+        }
+
+        .hire-imgThree {
+                border-radius: 60px 0px 0px 60px;
+        }
+
+        .hire-imgFour {
+                margin-top: 10px;
+                border-radius: 60px 60px 60px 0px;
+        }
+
+        .hire-imgTwo {
+                width: 60px;
+                border-radius: 0 60px 60px 0px;
+        }
+
+        /* same shape for four card */
+        .sameOne {
+                height: 60px;
+                width: 60px;
+        }
+
+        .hire-imgOne {
+                border-radius: 0 30px 0px 30px;
+        }
+
+        .hire-imgFive {
+                border-radius: 30px 30px 0px 30px;
+        }
+
+        .hire-imgSix {
+                border-radius: 0px 30px 30px 30px;
+        }
+
+        .hire-imgSeven {
+                border-radius: 60px 0px 0px 0px;
+        }
+}
+
+
+
+/******
+Skilled section style
+ ******/
+.h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+}
+
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+}
+
+.col-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 80px;
+}
+
+.cir {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        padding: 20px 40px;
+}
+
+.cir2 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px dotted grey;
+        border-radius: 360px;
+        padding: 20px 40px;
+        z-index: 1;
+}
+
+.cir-disc {
+        font-size: 16px;
+        font-weight: 400;
+        color: gray;
+}
+
+.col-right {
+        flex: 1;
+        margin-right: 205px;
+
+}
+
+.p {
+        font-size: 18px;
+}
+
+.circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        height: 150px;
+        width: 150px;
+        border: 1px solid grey;
+        border-radius: 50%;
+        z-index: 2;
+        background-color: #fff;
+}
+
+
+
+.content {
+        font-size: 20px;
+        list-style: 0.5em;
+        font-weight: 400;
+        text-align: justify;
+}
+
+/* Meadia Quires */
+
+@media (max-width: 480px) {
+        .container {
+                flex-direction: column;
+        }
+
+        .col-left {
+                margin: 0;
+        }
+
+        .circle {
+                width: 120px;
+                height: 120px;
+        }
+
+        .cir2 {
+                width: 220px;
+                height: 220px;
+        }
+
+        h1 {
+                font-size: 1.5rem ;
+                font-weight: 500;
+        }
+
+        .col-right {
+                margin: 0;
+                padding: 50px;
+        }
+
+        .content {
+                font-size: 17px;
+        }
+
+}
